@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="PatronDecorator">
+  <ClassDiagramComponents>
+    <Class name="Alumno" package="" visibility="public" xPosition="700.0" yPosition="494.0">
+      <Fields>
+        <Field name="Nombre" type="String" visibility="package"/>
+        <Field name="Apellido" type="String" visibility="package"/>
+        <Field name="CI" type="int" visibility="package"/>
+        <Field name="Complemento" type="String" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="Nombre"/>
+          <Argument type="String" name="Apellido"/>
+          <Argument type="int" name="CI"/>
+          <Argument type="String" name="Complemento"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="getApellido" returnType="String" visibility="public"/>
+        <Method name="getCI" returnType="int" visibility="public"/>
+        <Method name="getComplemento" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="Nombre"/>
+        </Method>
+        <Method name="setApellido" returnType="void" visibility="public">
+          <Argument type="String" name="Apellido"/>
+        </Method>
+        <Method name="setCI" returnType="void" visibility="public">
+          <Argument type="int" name="CI"/>
+        </Method>
+        <Method name="setComplemento" returnType="void" visibility="public">
+          <Argument type="String" name="Complemento"/>
+        </Method>
+        <Method name="getNombreCompleto" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="AlumnoDecorador" package="" visibility="public" isAbstract="true" xPosition="367.0" yPosition="238.0">
+      <Fields>
+        <Field name="persona" type="IPersona" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="IPersona" name="persona"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getPersona" returnType="IPersona" visibility="protected"/>
+      </Methods>
+    </Class>
+    <Class name="CobrarBono" package="" visibility="public" xPosition="33.0" yPosition="48.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="IPersona" name="persona"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNombreCompleto" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Main" package="" visibility="public" xPosition="1053.0" yPosition="116.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Interface name="IPersona" package="" visibility="public" xPosition="810.0" yPosition="238.0">
+      <Methods>
+        <Method name="getNombreCompleto" returnType="void" visibility="public"/>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="AlumnoDecorador" target="IPersona"/>
+    <UseRelation source="AlumnoDecorador" target="IPersona" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="persona" source="AlumnoDecorador" target="IPersona" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Alumno" target="IPersona"/>
+    <IsRelation name="is" source="CobrarBono" target="AlumnoDecorador"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
