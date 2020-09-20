@@ -17,7 +17,7 @@ public class Main {
        Temas tema4 = new Temas("Introduccion a la programacion 4","Aprender lo basico","base4",12,74.0f);
        Temas tema5 = new Temas("Introduccion a la programacion 5","Aprender lo basico","base5",72,84.0f);
        Temas tema6 = new Temas("Introduccion a la programacion 6","Aprender lo basico","base6",48,94.0f);
-        Temas tema7 = new Temas("Introduccion a la programacion7","Aprender lo basico","base7",12,124.0f);
+       Temas tema7 = new Temas("Introduccion a la programacion7","Aprender lo basico","base7",12,124.0f);
        
        //creacion de cursos
        
@@ -65,7 +65,7 @@ public class Main {
        Carrera carrera3=new Carrera("Ingenieria en TI","Proyecto de grado");
        carrera3.addCurso(curso4);
        
-       System.out.println("temas:"+tema1.getCosto()+"Bs"+", Curso"+curso.getCosto()+"Bs"+", Carrera"+carrera1.getCosto()+"Bs");
+        System.out.println("temas:"+tema1.getCosto()+"Bs"+", Curso"+curso.getCosto()+"Bs"+", Carrera"+carrera1.getCosto()+"Bs");
         System.out.println("***************************************************************");
         System.out.println("temas:"+tema1.getDuracion()+"Hrs"+", Curso"+curso.getDuracion()+"Hrs"+", Carrera"+carrera1.getDuracion()+"Hrs");
         System.out.println("***************************************************************");

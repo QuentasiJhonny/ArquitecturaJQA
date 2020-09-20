@@ -48,6 +48,7 @@ public class Temas extends AbstracCurso{
 
     @Override
     public int getDuracion() {
+        
         return Duracion;
         }
 

@@ -65,7 +65,7 @@ public class Carrera extends AbstracCurso{
     @Override
     public double getCosto() {
         
-         int costo=0;
+    int costo=0;
     for (AbstracCurso curso :Listcursos){
         costo+= curso.getCosto();
         

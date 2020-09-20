@@ -16,12 +16,6 @@ public class Main {
         boolean aux=true;
    Scanner sc =new Scanner(System.in);
   
-  
-   
- 
-    
-   
-    
    while(aux){
         System.out.println("*********MENU PRINCIPAL*********");
         System.out.println("1:Crear");    
